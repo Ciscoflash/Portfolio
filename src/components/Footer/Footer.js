@@ -20,8 +20,7 @@ const Footer = () => {
       </div>
 
       <div className="copy">
-        &copy; Copyright 2023, Designed and licensed by Abraham Jude. All rights
-        reserved
+        &copy; Copyright 2023, Designed by Abraham Jude. All rights reserved
       </div>
     </div>
   );
