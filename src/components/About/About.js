@@ -4,9 +4,6 @@ import { SlBadge, SlBag } from "react-icons/sl";
 import { BiSupport } from "react-icons/bi";
 import MyCV from "../../cv/mycv.pdf";
 import { AiOutlineFileZip } from "react-icons/ai";
-import { useState } from "react";
-import { useContext } from "react";
-import { HmsContext } from "../../Context/HmsContext";
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -16,8 +13,6 @@ const About = () => {
     link.click();
     document.body.removeChild(link);
   };
-
-  const { aboutLink, setAboutLink } = useContext(HmsContext);
 
   return (
     <div className="About" id={aboutLink}>

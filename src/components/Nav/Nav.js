@@ -10,12 +10,12 @@ const Nav = () => {
         </div>
         <div>
           <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Skills</li>
-            <li>Services</li>
-            <li>Portfolio</li>
-            <li>Contact</li>
+            <Link>Home</Link>
+            <Link>About</Link>
+            <Link>Skills</Link>
+            <Link>Services</Link>
+            <Link>Portfolio</Link>
+            <Link>Contact</Link>
           </ul>
         </div>
       </div>
