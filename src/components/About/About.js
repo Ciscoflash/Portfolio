@@ -15,7 +15,7 @@ const About = () => {
   };
 
   return (
-    <div className="About" id={aboutLink}>
+    <div className="About" id="about">
       <div className="topAbout">
         <h1>About Me</h1>
         <p>My Introduction</p>

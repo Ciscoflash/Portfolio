@@ -4,7 +4,7 @@ import { ImWhatsapp } from "react-icons/im";
 import { BsLinkedin } from "react-icons/bs";
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <h1>Contact Me</h1>
       <p>Get in tourch</p>
 

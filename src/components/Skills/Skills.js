@@ -2,7 +2,7 @@ import React from "react";
 
 const Skills = () => {
   return (
-    <div className="skills">
+    <div className="skills" id="skills">
       <div>
         <h1>Skills</h1>
         <p className="tss">My technical level</p>

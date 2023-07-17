@@ -8,7 +8,7 @@ import looplab from "../../accests/lopvis.png";
 import socials from "../../accests/socials.png";
 const Portfolio = () => {
   return (
-    <div className="portfolio">
+    <div className="portfolio" id="portfolio">
       <h1>Portfolio</h1>
       <p>Most recent Work</p>
 

@@ -16,7 +16,7 @@ const Services = () => {
   const [webDesign, setWebDesign] = useState(false);
   return (
     <div>
-      <div className="services">
+      <div className="services" id="services">
         <div className="svs">
           <h1>Services</h1>
           <p>what i offer</p>
