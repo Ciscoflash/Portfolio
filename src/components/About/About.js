@@ -48,12 +48,12 @@ const About = () => {
             <div className="experience">
               <SlBadge size={30} />
               <p>Experience</p>
-              <span>8 + Years</span>
+              <span>2 + Years</span>
             </div>
             <div className="completed">
               <SlBag size={30} />
               <p>Completed</p>
-              <span>48 + Projects</span>
+              <span>26 + Projects</span>
             </div>
             <div className="support">
               <BiSupport size={30} />
