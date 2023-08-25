@@ -6,14 +6,34 @@ import { BiLink } from "react-icons/bi";
 import Gavo from "../../accests/gavo2.png";
 import looplab from "../../accests/lopvis.png";
 import socials from "../../accests/socials.png";
+import prompt from "../../accests/PromptopiaImg.png";
+import { motion } from "framer-motion";
 const Portfolio = () => {
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
-      <p>Most recent Work</p>
+      <motion.h1
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.9 }}
+      >
+        Portfolio
+      </motion.h1>
+      <motion.p
+        initial={{ opacity: 0, translateX: 100 }}
+        whileInView={{ opacity: 1, translateX: 0 }}
+        transition={{ duration: 1 }}
+      >
+        Most recent Work
+      </motion.p>
 
       <div className="ports">
-        <div className="grid">
+        <motion.div
+          className="grid"
+          initial={{ opacity: 0, scale: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, scale: 1, translateX: 0 }}
+          whileHover={{ translateX: -10, translateY: -10 }}
+          transition={{ duration: 0.9 }}
+        >
           <img src={pead} alt="" />
           <h1>PEADPAY API</h1>
           <p>
@@ -32,8 +52,14 @@ const Portfolio = () => {
               <AiOutlineGithub size={25} />
             </Link>
           </div>
-        </div>
-        <div className="grid">
+        </motion.div>
+        <motion.div
+          className="grid"
+          initial={{ opacity: 0, scale: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, scale: 1, translateX: 0 }}
+          whileHover={{ translateX: 10, translateY: -10 }}
+          transition={{ duration: 0.9 }}
+        >
           <img src={Gavo} alt="" />
           <h1>Complete Hospital Management System</h1>
           <p>
@@ -57,8 +83,14 @@ const Portfolio = () => {
               <BiLink size={25} />
             </Link>
           </div>
-        </div>
-        <div className="grid">
+        </motion.div>
+        <motion.div
+          className="grid"
+          initial={{ opacity: 0, scale: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, scale: 1, translateX: 0 }}
+          whileHover={{ translateX: 10, translateY: 10 }}
+          transition={{ duration: 0.9 }}
+        >
           <img src={looplab} alt="" />
           <h1>Looplab</h1>
           <p>Looplab is a cloned website template built with Bootstrap</p>
@@ -76,8 +108,14 @@ const Portfolio = () => {
               <BiLink size={25} />
             </Link>
           </div>
-        </div>
-        <div className="grid">
+        </motion.div>
+        <motion.div
+          className="grid"
+          initial={{ opacity: 0, scale: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, scale: 1, translateX: 0 }}
+          whileHover={{ translateX: -10, translateY: 10 }}
+          transition={{ duration: 0.9 }}
+        >
           <img src={socials} alt="" />
           <h1>SocialX</h1>
           <p>
@@ -98,8 +136,45 @@ const Portfolio = () => {
               <BiLink size={25} />
             </Link>
           </div>
-        </div>
-        <div className="grid">
+        </motion.div>
+        <motion.div
+          className="grid"
+          initial={{ opacity: 0, scale: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, scale: 1, translateX: 0 }}
+          whileHover={{ translateX: 10, translateY: 10 }}
+          transition={{ duration: 0.9 }}
+        >
+          <img src={prompt} alt="" />
+          <h1>Promptopia</h1>
+          <p>
+            Promptopia is an open-source AI prompting tool for modern world to
+            discover, create and share creative Prompts
+          </p>
+          <div className="stack">
+            <span>Next js</span>
+            <span>Tailwind</span>
+            <span>Mongodb</span>
+            <Link
+              to={"https://github.com/Ciscoflash/project_ai_prompts"}
+              className="gitss"
+            >
+              <AiOutlineGithub size={25} />
+            </Link>
+            <Link
+              to={"https://project-ai-prompts.vercel.app/"}
+              className="gitss"
+            >
+              <BiLink size={25} />
+            </Link>
+          </div>
+        </motion.div>
+        <motion.div
+          className="grid"
+          initial={{ opacity: 0, scale: 0, translateX: -100 }}
+          whileInView={{ opacity: 1, scale: 1, translateX: 0 }}
+          whileHover={{ rotateY: 30, rotateX: -30 }}
+          transition={{ duration: 0.9 }}
+        >
           <img src={socials} alt="" />
           <h1>SocialX</h1>
           <p>
@@ -120,29 +195,7 @@ const Portfolio = () => {
               <BiLink size={25} />
             </Link>
           </div>
-        </div>
-        <div className="grid">
-          <img src={socials} alt="" />
-          <h1>SocialX</h1>
-          <p>
-            SocialX is a company clone app built for companies to easily
-            customise and use to enhance there Productivity
-          </p>
-          <div className="stack">
-            <span>React js</span>
-            <span>Css</span>
-            <span>AOS</span>
-            <Link
-              to={"https://github.com/Ciscoflash/SocialX"}
-              className="gitss"
-            >
-              <AiOutlineGithub size={25} />
-            </Link>
-            <Link to={""} className="gitss">
-              <BiLink size={25} />
-            </Link>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const Nav = () => {
         <div>
           <p>{Name}</p>
         </div>
-        <div>
+        <div className="sme">
           <ul>
             <a href="#">Home</a>
             <a href="#about">About</a>

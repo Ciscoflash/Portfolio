@@ -6,23 +6,33 @@ import { TbBrandAsana } from "react-icons/tb";
 import { IoMdClose } from "react-icons/io";
 import { GrStatusGood } from "react-icons/gr";
 import { useState } from "react";
+import { motion } from "framer-motion";
 const Services = () => {
   const [skillModal, setSkillModal] = useState(false);
   const [serviceMdal, setServiceModal] = useState({
     title: "",
     description: "",
   });
-  console.log(serviceMdal);
   const [webDesign, setWebDesign] = useState(false);
   return (
     <div>
       <div className="services" id="services">
         <div className="svs">
-          <h1>Services</h1>
+          <motion.h1
+            initial={{ opacity: 0, scale: 0 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6 }}
+          >
+            Services
+          </motion.h1>
           <p>what i offer</p>
         </div>
         <div className="mainService">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, translateX: -100 }}
+            whileInView={{ opacity: 1, translateX: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <CgWebsite size={25} />
             <h1>Web Designer</h1>
             <p
@@ -38,8 +48,12 @@ const Services = () => {
             >
               view more <AiOutlineArrowRight className="views" />
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, translateY: 100 }}
+            whileInView={{ opacity: 1, translateY: 0 }}
+            transition={{ duration: 0.6 }}
+          >
             <PiBracketsAngleBold size={25} />
             <h1>UI/UX Designer</h1>
             <p
@@ -55,8 +69,12 @@ const Services = () => {
             >
               view more <AiOutlineArrowRight className="views" />
             </p>
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, translateX: 100 }}
+            whileInView={{ opacity: 1, translateX: 0 }}
+            transition={{ duration: 0.8 }}
+          >
             <TbBrandAsana size={25} />
             <h1>App Developement</h1>
             <p
@@ -72,7 +90,7 @@ const Services = () => {
             >
               view more <AiOutlineArrowRight className="views" />
             </p>
-          </div>
+          </motion.div>
         </div>
 
         {skillModal && (

@@ -1,14 +1,23 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 const Skills = () => {
   return (
     <div className="skills" id="skills">
-      <div>
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6 }}
+      >
         <h1>Skills</h1>
         <p className="tss">My technical level</p>
-      </div>
+      </motion.div>
       <div className="devs">
-        <div className="front">
+        <motion.div
+          className="front"
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
           <p>Frontend developer</p>
           <div className="fronts">
             <div>
@@ -50,8 +59,13 @@ const Skills = () => {
               <p>Begginner</p>
             </div>
           </div>
-        </div>
-        <div className="back">
+        </motion.div>
+        <motion.div
+          className="back"
+          initial={{ opacity: 0, translateX: 100 }}
+          whileInView={{ opacity: 1, translateX: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <p>Backend developer</p>
           <div className="backs">
             <div className="fronts">
@@ -95,7 +109,7 @@ const Skills = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

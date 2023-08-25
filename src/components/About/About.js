@@ -1,9 +1,10 @@
 import React from "react";
-import pcis from "../../accests/about.jpg";
+import pcis from "../../accests/pf.jpg";
 import { SlBadge, SlBag } from "react-icons/sl";
 import { BiSupport } from "react-icons/bi";
 import MyCV from "../../cv/mycv.pdf";
 import { AiOutlineFileZip } from "react-icons/ai";
+import { motion } from "framer-motion";
 const About = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -17,12 +18,30 @@ const About = () => {
   return (
     <div className="About" id="about">
       <div className="topAbout">
-        <h1>About Me</h1>
-        <p>My Introduction</p>
+        <motion.h1
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+        >
+          About Me
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, translateZ: 300 }}
+          whileInView={{ opacity: 1, translateZ: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          My Introduction
+        </motion.p>
       </div>
       <div className="bottomAbout">
         <div className="sidePic">
-          <img src={pcis} alt="" />
+          <motion.img
+            src={pcis}
+            alt=""
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          />
         </div>
         <div className="infos">
           <div className="experiences">
@@ -43,7 +62,11 @@ const About = () => {
             </div>
           </div>
           <div className="descripts">
-            <p>
+            <motion.p
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+            >
               Experienced Full Stack Developer with a passion for crafting
               robust and scalable web applications. Proficient in both front-end
               and back-end technologies, adept at translating business
@@ -53,7 +76,7 @@ const About = () => {
               user-friendly applications that exceed client expectations. Ready
               to contribute to innovative projects and help drive success
               through seamless end-to-end development.
-            </p>
+            </motion.p>
           </div>
           <div className="resume">
             <button type="btn" onClick={handleDownload}>
